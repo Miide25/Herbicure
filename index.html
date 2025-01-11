@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbicure</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000000, #4a4a4a, #6b4fbb);
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            color: #5fccff;
+            font-size: 2em;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .testimonial-img {
+            width: 100%;
+            max-width: 500px;
+            margin: 10px auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-title {
+            font-size: 1.5em;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+
+        .learn-more-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 300px;
+            transition: background-color 0.3s;
+        }
+
+        .learn-more-btn:hover {
+            background-color: #45a049;
+        }
+
+        .chat-btn {
+            background-color: #ff0000;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 300px;
+            transition: background-color 0.3s;
+        }
+
+        .chat-btn:hover {
+            background-color: #cc0000;
+        }
+
+        .access-btn {
+            background-color: #1a472a;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 300px;
+            transition: background-color 0.3s;
+        }
+
+        .access-btn:hover {
+            background-color: #143d23;
+        }
+
+        .fix-text {
+            color: #0066ff;
+            font-size: 1.5em;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .cure-text {
+            color: #ff0000;
+            font-size: 1.5em;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #cccccc;
+        }
+
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .disclaimer {
+            color: #ff0000;
+            font-size: 0.8em;
+            margin-top: 20px;
+        }
+
+        .pointer-image {
+            width: 150px;
+            height: auto;
+            margin: 10px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Bye Bye To 30seconds Palava with Madam... For Men Over 40</h1>
+        
+        <!-- Replace with actual testimonial images -->
+        <img src="life.jpg" alt="First testimonial" class="testimonial-img">
+
+        <div class="main-title">THE NATURAL SOLUTION YOU CAN EVER GET</div>
+        
+        <button class="learn-more-btn" onclick="learnMore()">CLICK THIS BUTTON TO LEARN MORE</button>
+        
+        <div class="fix-text">FIX IT ONCE AND FIX IT ALL</div>
+        
+        <div class="cure-text">IT'S A CURE........</div>
+        
+        <button class="chat-btn" onclick="startChat()">CLICK TO CHAT WITH US</button>
+        
+        <!-- Add pointer image -->
+        <img src="image56.gif" alt="Pointer" class="pointer-image">
+        
+        <button class="access-btn" onclick="getAccess()">GET INSTANT ACCESS</button>
+        
+        <div class="footer">
+            <p>Copyright © 2024. Quest Increment |Privacy Policy|Terms of Service</p>
+            <p>The contents of this website, are distributed by Quest Increment Marketing Services, and protected under the Nigerian Copyright Act pursuant to Nigeria and International Copyright Laws. Copying/Extraction of our contents without our express written permission and will be subject to the maximum fine/penalty imposed by the Law.</p>
+            <p class="disclaimer">This site is not a part of Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK Inc.</p>
+            <p><a href="#" onclick="showPrivacyPolicy()">Privacy Policy</a> | <a href="#" onclick="showTerms()">Terms of Service</a></p>
+        </div>
+    </div>
+
+    <script>
+        function learnMore() {
+            window.location.href = "next.html";
+        }
+
+        function startChat() {
+            window.location.href = "https://wa.link/ksgmk5";
+        }
+
+        function getAccess() {
+            window.location.href = "next.html";
+        }
+
+        function showPrivacyPolicy() {
+            window.location.href = "https://example.com/privacy-policy";
+        }
+
+        function showTerms() {
+            window.location.href = "https://example.com/terms";
+        }
+    </script>
+</body>
+</html>

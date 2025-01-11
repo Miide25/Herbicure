@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbicure</title>
+    <style>
+    body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+
+        .header-logo {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+img {
+            width:100%;
+            height:auto;
+            
+}
+        h5 {
+                width: 100%;
+            max-width: 500px;
+            margin: 10px auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px black;
+            background: yellow;
+            font-size: 27px;
+            font-weight :bold;
+        }
+        
+video {
+        background:#03055B;
+        width: 100%;
+            max-width: 500px;
+}
+        
+button {
+        font-size: 27px;
+            font-weight :bold;
+  border-radius: 25px;
+  background-color: #e63946; /* A softer red */
+  color: white;
+  font-weight: bold;
+  padding: 20px 40px; /* Slightly larger padding for better usability */
+  text-align: center;
+   margin-left: 20%;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  top: -5%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  border: none; /* Remove default border */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+button:hover {
+  background-color: #d62839; /* Darker red on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
+  transform: translateY(-3px); /* Subtle lift effect */
+}
+
+button:active {
+  transform: translateY(1px); /* Pressed down effect */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow */
+}
+ 
+        p {
+                Font-size: 30px;
+                Font-weight: bold;
+        }
+        span {
+                color: red;
+        }
+        strong {
+                text-decoration : underline;
+                Font-size: 30px;
+                Font-weight: bold;
+                color: red;
+        }
+        h1 {
+            Font-size: 28px;
+                Font-weight: 40%;
+                text-align: center;
+                top: 15%;
+        }
+        .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.card h2 {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin: 0;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.card ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.card ul li input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    accent-color: black; /* Modern browsers */
+}
+
+.card ul li span {
+    line-height: 1.5;
+    color: #333;
+}
+         .cord p {
+            Font-size:25px; 
+                 Font-weight:30px;
+               text-align: center;  
+         }
+        .story p {
+              font-size: 20px;
+                font-weight:10px;
+                font-style:normal;
+        }                
+        .story b { 
+                font-size: 25px;
+        }
+        .story span {
+                color:black;
+                text-decoration : underline;
+        }
+        .con b {
+            text-decoration : underline;    
+                font-size: 25px;
+              
+        }
+        .long span {
+                font-size:20px;
+                text-align:center;
+                margin-left:10px;
+        }
+          
+        .short p {
+                padding: 10px;
+                font-size:35px;
+                font-weight:50px;
+                font-style:uppercase;
+        }
+        .shrt span {
+              font-size:20px;
+        }
+        .big p {
+                font-size: 28px;
+        }
+        .bae b {
+                text-decoration:underline;
+        }
+
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border: 2px solid #000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #000;
+    background: #ff0;
+    padding: 10px;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border: 2px solid #000;
+}
+
+h2 {
+    font-size: 18px;
+    color: red;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.root-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 2px solid #000;
+}
+
+.root-section p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.benefits {
+    background-color: #ff0;
+    padding: 15px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.benefits h2 {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.benefits ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.benefits ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    list-style: disc;
+}
+
+.footer {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+      
+
+.contain {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+}
+
+.warning-section {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.warning-section h2 {
+    color: red;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.warning-section .highlight {
+    color: blue;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.packages-title {
+    text-align: center;
+    margin-bottom: 20px;
+    background: #ffcc00;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.packages-title h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+}
+
+.package {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+}
+
+.package h3 {
+    font-size: 20px;
+    color: red;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.package img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.package .discount {
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.package .warning {
+    color: red;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.package .price {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.package .price .strikethrough {
+    text-decoration: line-through;
+    color: #555;
+}
+
+.package .price .highlight {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.order-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.order-btn:hover {
+    background-color: darkred;
+}
+.cont {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+       .cont h2 {
+            color: #333;
+            text-align: center;
+        }
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        form input, form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+                width: 60%;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+        .info {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+
+    </style>
+</head>
+<body>
+  <img src="b5983272-e820-4378-9b62-5f6f50c4aabf.webp" >
+  <h1>Grow a BIG, STRONG, LONG and THICK penis within 14 days</h1>
+  <img src="unnamed.jpg">
+  <h5>A simple sex booster trick that is helping thousands of men overcome the problem of weak erection, premature ejaculation and micro penis (Small Gbola)</h5>
+        <video width="350" height="240" controls>
+                <source src="Cordyceps.mp4"type="video/mp4">      
+        </video>
+        <a href="#orderForm">
+  <button>Order Now</button>
+</a>
+        <p>
+                Dear men,<br><br>
+
+Are you tired of your penis contantly falling off in the inner room when ever you are in need of it……?<br><br>
+
+If your answer to this question is yes, then follow me as I will reveal to you the reason why men have been finding it difficult to boost their bedroom match.<br><br>
+
+Hi, My Name is Dr. Olawale in the next 5 minutes, you will discover<br><br>
+
+The Real Reason Why You Have Not Been Able <span>To Get Rid Of Your Bedroom Issues</span> All These Years… Even With All These Sex Booster Medication You Used & Dumped.<br><br>
+
+And How To Go From Been a Weak man In The Oda Room To Easily Eradicte it With These Simple Sex Booster Trick.<br><br>
+
+Plus Why Depending On Those Medication Can Damage Your Kidney And Liver On A Long Run Which Can Lead To Your Premature Death<br><br>
+
+                Now Just imagine this is your woman waiting for you on bed to <strong>come devour & drill her pussy very well with your joystick.</strong>
+        </p>
+         <img src="nice.jpeg">
+        <h1>But deep down in your mind, you already know 4 things will end it.</h1>
+         <div class="card">
+        <h2>For some reasons......</h2>
+        <ul>
+            <li>
+                <input type="checkbox" checked disabled>
+                <span>Is either You raise her mood for better sex and leave her hanging there, thinking of another man who can handle her well</span>
+            </li>
+            <li>
+                <input type="checkbox" checked disabled>
+                <span>You also know that after a few strokes, you’ll shake your head like a agama lizard and shout, ‘Mummy, I am cuming,’ and slump beside her.</span>
+            </li>
+            <li>
+                <input type="checkbox" checked disabled>
+                <span>You already know you’ll find it hard getting your dick to rise again no matter what you do and take.</span>
+            </li>
+            <li>
+                <input type="checkbox" checked disabled>
+                <span>And lastly you already know that it’ll take a miracle to get your dick to fill her vagina and satisfy her thoroughly.</span>
+            </li>
+        </ul>
+    </div>
+        <div class="cord">
+                <p>Yes........<br><br><span>You already know all of this. So there’s no need to lie about it because it is the main reasons most homes are broken and women end up having babies that are not for their husband.</span></p>       
+        </div>
+        <video width="550" height="200" controls>
+                <source src="IMG_3065.mp4"type="video/mp4">      
+        </video>
+        <div class="story">
+                <p>
+                        <b>Let me tell you something….</b><br><br>
+
+Women love sex a lot, especially when they are between the age <span>of 27-45 years old.</span><br>
+
+Research shows they are capable of <span>having multiple orgasms in one sex round and yet still desire more.</span>
+
+I trust you must have had a period when your woman asked you for more after you finished what might have looked like a marathon, right?
+
+Trust me…
+
+                        <span>They might pretend but check very well; they love it more you can think off.</span>
+
+And it hurt them when they don’t experience sexual orgasm from you
+
+Now…
+I am not saying this to make you feel bad.
+Far from it.
+I know what it is to be a man in Nigeria, especially at this time when we don’t know where the economy is going.
+Trust me…
+I am proud of you to the core.
+Not just because you are a provider and protector.
+But because you care deeply about your woman, that is why you are here.
+I’ll be a liar to pretend you have not spent much trying to cure this.
+For one…
+I know you have used Viagra and tramadol, but you know now that those two increase your risk of heart disease, stroke, and death.
+     
+                        
+                </p>
+        </div>
+        <img src="65e332c9ddc74_image22.png" alt="picture">
+        <div class="con">
+                <p>
+                        I know you have also tried orthodox medications, which require that you continue spending every day.<br><br>
+
+ 
+
+                        But yet nothing worked<br><br>
+
+ 
+
+                        <b>But you still believe something is possible beacuse of the love you have for your woman.</b><br><br>
+
+ 
+
+For that, I am proud of you.<br><br>
+
+ 
+
+                        <span>You see, most people don’t know that erectile dysfunction is a lifestyle problem and not necessarily dead cells, as we are meant to believe.</span></b>
+                </p>
+        </div>
+<img src="65e332e53eed2_image8.png" alt="pictre">
+<div class="men">
+        <p>
+                Here’s why:<br><br>
+
+Men’s bodies are quite different from those of women.
+
+And God was intentional when He did this.
+
+For one reason
+
+He knew the duty of supporting our families would fall on us.
+
+And this can be seen in our day-to-day struggles in life.
+
+Again…
+
+He knew we would age faster due to our nature.
+
+Hence, the reason our testosterone levels are higher
+        </p>
+</div>
+<img src="p.jpg" alt="picture">
+<div class="text">
+        <p>With our testoterone levels high, we get to have…
+
+More energy.
+
+More bone density.
+
+More stamina.
+
+More muscle force.</p>
+</div>
+<img src="e.png" alt="picture">
+<div class="short">
+        <p>
+                And, most importantly…<br><br>
+
+                <strong>More sex drive and ability.</strong><br><br>
+
+You can easily feel this <b>by how easy it is for you to think</b> and desire sex as a human being.<br><br>
+
+ 
+
+                But then…<br><br>
+
+ 
+
+                <span>With age, stress, and the rubbish food we eat.</span>
+        </p>
+</div>
+<img src="c.png" alt="picture">
+<div class="long">
+        <p>
+                <span><br>Our testosterone levels drop, thereby making it hard for us to get this drive for sex or even sustain it when we do.</span><br><br>
+
+You see…<br>
+
+ 
+
+As I mentioned earlier, this is neither your fault nor mine.<br><br>
+
+ 
+
+It is just nature and how our body has been made to function.<br><br>
+
+ 
+
+ 
+
+That is why I find it funny when people tell you that you can cure erectile dysfunction with stretches and Viagra, aside from the fact that they are lying to you.<br><br>
+
+ 
+
+ 
+
+One of the main things that you might not be considering is that taking anything that artificially elevates your mood for sex without proper sustenance kills your already weak cells.<br><br>
+
+                <span>And I doubt if you want to die on top of a woman without enjoying the fruits of your hard labor.</span><br><br>
+
+ 
+
+See…<br><br>
+
+You need those elevated moods to function properly again.<br><br>
+
+ 
+
+But you don’t want them to be artificial because the truth is they won’t last, and they’ll help destroy your already weak cells…<br><br>
+
+ 
+
+Which can lead to complications like heart failure, stroke, and even death.<br><br>
+
+ 
+
+ 
+                
+So what is the best way, you ask?<br><br>
+
+ 
+
+Well, it is ONLY inside of your body waiting for activation.<br><br>
+
+ 
+
+It is your Tetosterone-level or the cell of sex that is contained in our Tongak Ali root.<br><br>
+
+You see…<br><br>
+
+ 
+
+By simply activating it using sustainable, curative, and natural means, you’ll get to……..<br><br>
+
+Fuck her till she reach her orgasm stage.
+        </p>
+</div>
+<img src="image43.gif" alt="pic">
+<div class="short">
+        <p>
+                You’ll get a rock-hard erection and stamina to fuck
+        </p>
+        
+</div>
+<img src="6537fa95928c2_tumblr_nd9ofwJRI01toe5dro2_400.gif" alt="pic">
+<div class="shrt">
+        <p>
+                <span>Without ever needing to depend on any artificial drug ever again.</span><br><br>
+Now…<br><br>
+ 
+This solution is simply for men who see sex as a weapon to cage their women<br><br>
+                Yes i want you to fuck her, sily.
+        </p>
+</div>
+<img src="s.gif" alt="pic">
+<p>
+        It is for men who want to regain control without worrying about failure.
+</p>
+<img src="p.gif" alt="pic">
+<div class="lg">
+        <p>
+                
+It is simply for men…<br>
+
+                <span>Who wants to enjoy lovemaking whenever and however they want.</span>
+        </p>
+</div>
+<img src="x.gif" alt="pic">
+<h2>The reason I say this is because…</h2>
+<div class="big">
+<p>
+        This <span>Tongak Ali root</span> is regarded as one of the most potent herbs for erectile dysfunction treatment in the world.
+</p>
+</div>
+<img src="un.jpg" alt="picture">
+<div class="cls">
+        <p>
+                And it is contained in the natural <span>Cordyceps Erection Booster Coffee</span>, which was made from the natural root called (Tonagk Ali root) <span>to helps you regain control of your sexual power in as little as 30 minutes after usage.</span>
+        </p>
+</div>
+<img src="sp.jpg" alt="pic">
+<a href="#orderForm">
+  <button>Order Now</button>
+</a>
+<div class="bae">
+        <p>
+                <span>And this is very possible.</span>
+
+Because over the years, my team of health experts has developed the <b>completely safe and highly effective Penis Enlargement and Sex Boosting system</b>
+        </p>
+</div>
+        <img src="a.jpeg" alt="pic">
+<div class="mae">
+        <p>
+                Our product is called  <span>‘Cordyceps Erection Booster Coffee’</span>, and it perform a <strong>Very crucial roles in your overall sexual health</strong> with its 6 active and potent ingredients:
+        </p>
+</div>
+
+    <div class="container">
+        <h1>Cordyceps Erection Booster Coffee Pack</h1>
+
+        <section class="root-section">
+            <h2>1. EPIMEDIUM ROOT:</h2>
+            <p>
+                Cell (penis) regeneration is a very difficult thing to achieve, especially after 25. 
+                That’s why the epimedium root is the most important and active ingredient in the 
+                “Cordyceps Erection Booster Coffee Pack.” Because once it gets easily absorbed by your penile skin, 
+                it quickens the rapid regrowth of the cells in the ‘big fold.’ This procedure is completely safe and 
+                poses no threat to your overall health.
+            </p>
+        </section>
+
+        <section class="root-section">
+            <h2>2. GINKO ROOT:</h2>
+            <p>
+                This powerful herb is an herbal supplement that comes from the roots of the green shrub tree 
+                Eurycoma longifolia, which is native to Southeast Asia. It’s used in traditional medicine to treat 
+                male infertility and erectile dysfunction.
+            </p>
+        </section>
+
+        <section class="root-section">
+            <h2>3. YOHIMBE HERB:</h2>
+            <p>
+                The bark of the tree Yohimbe is used to treat poor circulation of blood; when taken in, 
+                it increases the flow of blood to the reproductive organs and increases libido also. 
+                It is used to treat weak erection, helps men have strong erections, and maintain them.
+            </p>
+        </section>
+
+        <section class="root-section">
+            <h2>4. TRIBULUS:</h2>
+            <p>
+                This herb helps the body to produce sex hormones; it specifically boosts the production of testosterone 
+                and routineizes hormone balance in men. Tribulus is used in the treatment of erectile dysfunction, high 
+                blood sugar, and hormonal imbalance.
+            </p>
+        </section>
+
+        <section class="root-section">
+            <h2>5. RED GINSENG:</h2>
+            <p>
+                This is a popular herb that is used in treating: low sex drive, difficulty getting, and maintaining an erection.
+            </p>
+        </section>
+
+        <section class="root-section">
+            <h2>6. TONGAT ALI ROOT:</h2>
+            <p>
+                This is a powerful natural aphrodisiac that is used to increase sexual libido and pleasure; its active ingredient 
+                icariin helps to increase the flow of blood to the extreme parts of the body including the penis and testes. 
+                This helps in getting and maintaining a strong erection.
+            </p>
+        </section>
+
+        <div class="benefits">
+            <h2>Benefits of Cordyceps Erection Booster Coffee</h2>
+            <ul>
+                <li>The treatment of premature ejaculation permanently.</li>
+                <li>Helps boost your immune system & testosterone levels from 60-70% between 1-7 days.</li>
+                <li>Gives an instant result no matter how stubborn the erectile dysfunction is.</li>
+                <li>Helps to enlarge the male private organ.</li>
+                <li>Helps normalize and reduce high blood pressure.</li>
+                    <li>it helps you gain strong and lasting erection instantly 15mins after applying it on your penis</li>
+                    <li>It will Permanently Increase your PENIS size making it look bigger, longer and stronger</li>
+                    <li>Increases sexual stimulation, arousal and prolong sex time</li>
+                    <li>Helps Increase Energy, stamina, vitality and endurance</li>
+                    <li>Promotes proper blood circulation to your penis</li>
+            </ul>
+        </div>
+
+        <footer class="footer">
+            <p>So far, we’ve helped over 1,089 Nigerian men restore their sexual performance and bring back joy into their lives.</p>
+        </footer>
+    </div>
+<h2>Listen to what they have to say</h2>
+  <video width="550" height="200" controls>
+                <source src="Video_2024_02_09_17_15_41-1.mp4"type="video/mp4">      
+        </video>
+<video width="550" height="200" controls>
+                <source src="cordyceps-9.mp4"type="video/mp4">      
+        </video>
+<video width="550" height="200" controls>
+                <source src="cordycep-2.mp4"type="video/mp4">      
+        </video>
+  <div class="container">
+        <h1>Check Out More Review From Our Customer</h1>
+  </div>
+<img src="6588088a8e00a_Screenshot_20231224-112614.jpg" alt="pic">
+<img src="658808bd1f5fb_Screenshot_20231224-112620.jpg">
+<img src="u.jpeg" alt="sample">
+<img src="k.jpeg" alt="picture">
+<img src="l.jpg" alt="pict">
+<div class="contain">
+        <section class="warning-section">
+            <p>At this point, I know you are eager to buy this product.</p>
+            <h2>However, I must warn:</h2>
+            <p>
+                Please Sir, This Product is specially & specifically formulated for premium and high-value people 
+                who seriously want to get rid of their <span class="highlight">sexual related problems</span>.
+            </p>
+            <p>
+                So please, if you know you don’t have enough money to pay for the product when our delivery guy brings 
+                it to you,
+            </p>
+            <p>
+                If you know you won’t be available to receive your order within the next 24 hours,
+            </p>
+            <p>
+                If you know you will be very busy and won’t have time to pick our calls once you place your order, please, 
+                we are begging you in the name of the God you serve, <strong>Do Not Order</strong>.
+            </p>
+        </section>
+
+        <div class="packages-title">
+            <h2>Select Your Package Now</h2>
+        </div>
+
+        <!-- Package 1 -->
+        <div class="package">
+            <h3>RECOMMENDED</h3>
+            <img src="sp.jpg" alt="Cordyceps Coffee">
+            <p>1 Pack of Cordyceps Erection Booster Coffee</p>
+            <p class="discount">50% Discount (Recommended)</p>
+            <p class="warning">Please <strong>DO NOT ORDER</strong> if you are not ready to buy now</p>
+            <p class="price">NORMAL PRICE: <span class="strikethrough">₦50,000</span></p>
+            <p class="price">DISCOUNT PRICE: <span class="highlight">₦30,000</span></p>
+           <a href="#orderForm"><button class="order-btn">Order Now</button></a>
+        </div>
+
+        <!-- Package 2 -->
+        <div class="package">
+            <h3>PERFECTLY RECOMMENDED</h3>
+            <img src="sp.jpg" alt="Cordyceps Coffee">
+            <p>2 Packs of Cordyceps Erection Booster Coffee</p>
+            <p class="discount">70% Discount (Recommended)</p>
+            <p class="warning">Please <strong>DO NOT ORDER</strong> if you are not ready to buy now</p>
+            <p class="price">NORMAL PRICE: <span class="strikethrough">₦70,000</span></p>
+            <p class="price">DISCOUNT PRICE: <span class="highlight">₦45,000</span></p>
+            <a href="#orderForm"><button class="order-btn">Order Now</button></a>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="package">
+            <h3>COMPLETE TREATMENT</h3>
+            <img src="sp.jpg" alt="Cordyceps Coffee">
+            <p>3 Packs of Cordyceps Erection Booster Coffee</p>
+            <p class="discount">80% Discount (Recommended)</p>
+            <p class="warning">Please <strong>DO NOT ORDER</strong> if you are not ready to buy now</p>
+            <p class="price">NORMAL PRICE: <span class="strikethrough">₦90,000</span></p>
+            <p class="price">DISCOUNT PRICE: <span class="highlight">₦60,000</span></p>
+            <a href="#orderForm"><button class="order-btn">Order Now</button></a>
+        </div>
+    </div>
+<div class="cont">
+        <form action="https://submit-form.com/Akkrf6SJN" id="orderForm">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="phoneNumber">Phone Number *</label>
+            <select id="countryCode" name="countryCode" required>
+                <option value="NG">Nigeria (+234)</option>
+            </select>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required placeholder="Enter phone number">
+
+            <label for="whatsappNumber">WhatsApp Number</label>
+            <select id="whatsappCountryCode" name="whatsappCountryCode">
+                <option value="NG">Nigeria (+234)</option>
+            </select>
+            <input type="tel" id="whatsappNumber" name="whatsappNumber" placeholder="Enter WhatsApp number">
+
+            <label for="deliveryState">Delivery State *</label>
+            <select id="deliveryState" name="deliveryState" required>
+                <option value="">-- Select a State --</option>
+                <option value="Abia">Abia</option>
+                <option value="Adamawa">Adamawa</option>
+                <option value="Akwa Ibom">Akwa Ibom</option>
+                <option value="Anambra">Anambra</option>
+                <option value="Bauchi">Bauchi</option>
+                <option value="Bayelsa">Bayelsa</option>
+                <option value="Benue">Benue</option>
+                <option value="Borno">Borno</option>
+                <option value="Cross River">Cross River</option>
+                <option value="Delta">Delta</option>
+                <option value="Ebonyi">Ebonyi</option>
+                <option value="Edo">Edo</option>
+                <option value="Ekiti">Ekiti</option>
+                <option value="Enugu">Enugu</option>
+                <option value="Gombe">Gombe</option>
+                <option value="Imo">Imo</option>
+                <option value="Jigawa">Jigawa</option>
+                <option value="Kaduna">Kaduna</option>
+                <option value="Kano">Kano</option>
+                <option value="Katsina">Katsina</option>
+                <option value="Kebbi">Kebbi</option>
+                <option value="Kogi">Kogi</option>
+                <option value="Kwara">Kwara</option>
+                <option value="Lagos">Lagos</option>
+                <option value="Nasarawa">Nasarawa</option>
+                <option value="Niger">Niger</option>
+                <option value="Ogun">Ogun</option>
+                <option value="Ondo">Ondo</option>
+                <option value="Osun">Osun</option>
+                <option value="Oyo">Oyo</option>
+                <option value="Plateau">Plateau</option>
+                <option value="Rivers">Rivers</option>
+                <option value="Sokoto">Sokoto</option>
+                <option value="Taraba">Taraba</option>
+                <option value="Yobe">Yobe</option>
+                <option value="Zamfara">Zamfara</option>
+                <option value="FCT">Federal Capital Territory (FCT)</option>
+            </select>
+
+            <label for="package">Choose the package you want *</label>
+            <select id="package" name="package" required>
+                <option value="">-- Select a Package --</option>
+                <option value="1 pack">1 pack of Ginko cordyceps Erection booster coffee & Free Delivery -₦30,000
+                        
+                </option>
+                <option value="2 pack">2 pack of Ginko cordyceps Erection booster coffee & Free Delivery -₦45,000
+                        </option>
+                <option value="3 pack">3 pack of Ginko cordyceps Erection booster coffee & Free Delivery -₦60,000
+                        </option>
+                     <option value="5 pack">5 pack of Ginko cordyceps Erection booster coffee & Free Delivery -₦100,000
+                        </option>
+                     <option value="7 pack">7 pack of Ginko cordyceps Erection booster coffee & Free Delivery -₦150,000
+                        </option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="info">
+            <p>Fields marked with an * are required.</p>
+        </div>
+    </div>
+
+    <script>
+        // All states preloaded for Nigeria, no additional logic needed for states
+    </script>
+</body>
